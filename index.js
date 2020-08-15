@@ -5,7 +5,7 @@ const welcomeRouter = require("./welcome/welcome-router");
 const actionRouter = require("./actions/actionRouter");
 const projectRouter = require("./actions/projectRouter");
 const server = express();
-const port = 4000;
+const port = process.env.PORT || 4000
 
 server.use(express.json()); 
 server.use(cors());

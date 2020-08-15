@@ -38,18 +38,23 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
--   [ ] Mention two parts of Express that you learned about this week.
-        1. Build web apps
-        2. Build RESTful web services that work with JSON
--   [ ] Describe Middleware?
-        Acts as a bridge between os, db, and apps. 
--   [ ] Describe a Resource?
-        Everythin is a resource. each resource is accessivle via URL
--   [ ] What can the API return to help clients know if a request was successful?
-        status code and message
 
--   [ ] How can we partition our application into sub-applications?
-        We can use Express Routers to split and app into sub apps to make it easier to maintain
+1. The core features of Node.js and 
+* Middleware
+* Routing
+* Routers for Application Modularity
+* Convenience Helpers
+
+2. Understand and explain the use of Middleware.
+    Acts a bridge between os, db. apps
+3. The basic principles of the REST architectural style.
+* Everything is a resource
+* Resources are accssible via unique URL
+* communication happens over a stateless protocol HTTP
+4. Understand and explain the use of Express Routers.
+    Routing is the main feature of Express. Makes building RESTFUL Web APIS easier. 
+5. Describe tooling used to manually test the correctness of an API.
+running npm run server and opening the web browser or using insomnia/postman.
 
 ## Minimum Viable Product
 
