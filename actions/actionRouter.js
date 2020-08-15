@@ -1,5 +1,6 @@
 const express = require("express");
 const Actions = require("../data/helpers/actionModel");
+// const Projects = require("../data/helpers/projectModel");
 const router = express.Router();
 
 //----------------------//
@@ -55,26 +56,6 @@ router.put("/actions/:id", validateAction, validateActionId, (req, res) => {
     });
 });
 
-//------------------------//
-//  POST A NEW ACTION     //
-//------------------------//
-// router.post("/actions", validateAction, (req, res) => {
-    
-//   Actions.insert(req.body)
-//     .then((action) => {
-//       res.status(201).json(action);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json({
-//         message: "There was an error creating new action",
-//       });
-//     });
-// });
-  
-
-
-
 //-------------------------------------------CUSTOM MIDDLEWARE---------------------------------------------//
 function validateActionId(req, res, next) {
   Actions.get(req.params.id)
@@ -96,9 +77,7 @@ function validateActionId(req, res, next) {
     });
 }
 
-
 function validateAction(req, res, next) {
-
   if (!res.body) {
     res.status(400).json({
       message: "missing action data",
